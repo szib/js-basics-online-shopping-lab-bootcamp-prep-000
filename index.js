@@ -36,9 +36,9 @@ function viewCart() {
 
 function total() {
   // write your code here
-  return getCart().reduce((total, item) => {
-    return total = total + item.itemPrice
-  })
+  const reducer = (total, item) => total + item.itemPrice
+  }
+  return getCart().reduce()
   
 }
 
