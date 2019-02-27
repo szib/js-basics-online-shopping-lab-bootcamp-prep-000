@@ -36,7 +36,7 @@ function viewCart() {
 
 function total() {
   // write your code here
-  const reducer = (total, item) => total + item.itemPrice
+  const reducer = (total, item) => total + item[itemPrice]
   var total = getCart().reduce(reducer)
   return total
 }
