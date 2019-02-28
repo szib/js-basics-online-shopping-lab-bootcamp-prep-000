@@ -22,6 +22,11 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+  
+  function getItemString(item) {
+    return `${item.itemName} at $${item.itemPrice}`
+  }
+  
   var cart = getCart()
   if (cart.length === 0) return 'Your shopping cart is empty.'
   var items = []
