@@ -58,5 +58,5 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
-  if ([...args])
+  if ([...arguments].length === 0) return 
 }
