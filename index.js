@@ -48,7 +48,7 @@ function removeFromCart(item) {
   // write your code here
   var items = getCart().map(item => item.itemName)
   var idx = items.indexOf(item) 
-  if (idx === 0) {
+  if (idx === -1) {
     return 'That item is not in your cart.'
   } else {
     return getCart().splice(idx,1)
