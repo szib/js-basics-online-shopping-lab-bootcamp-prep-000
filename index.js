@@ -46,7 +46,10 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var cart = getCart()
+  var items = getCart().map(item => item.itemName)
+  if (items.indexOf(item) === 0) {
+    return ''
+  }
   
 }
 
