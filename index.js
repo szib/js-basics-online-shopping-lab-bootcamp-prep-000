@@ -31,7 +31,7 @@ function viewCart() {
   if (cart.length === 0) return 'Your shopping cart is empty.'
   var items = []
   // if (cart.length === 1) return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
-  if (cart.length === 1) return `In your cart, you have ${getItemString(cart[1])}.`
+  if (cart.length === 1) return `In your cart, you have ${getItemString(cart[0])}.`
   for(var i=0; i<cart.length; i++) {
     i === cart.length - 1 
       ? items.push(`and ${cart[i].itemName} at $${cart[i].itemPrice}`)
