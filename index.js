@@ -30,12 +30,13 @@ function viewCart() {
   var cart = getCart()
   if (cart.length === 0) return 'Your shopping cart is empty.'
   var items = []
-  // if (cart.length === 1) return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
   if (cart.length === 1) return `In your cart, you have ${getItemString(cart[0])}.`
   for(var i=0; i<cart.length; i++) {
-    i === cart.length - 1 
-      ? items.push(`and ${getItemString(cart[i])}`)
-      : items.push(`${getItemString(cart[i])}`)
+    // i === cart.length - 1 
+    //   ? items.push(`and ${getItemString(cart[i])}`)
+    //   : items.push(`${getItemString(cart[i])}`)
+    if (i === cart.length - 1) items.push('and ')
+    items.push(`${getItemString(cart[i])}`)
   }
   return `In your cart, you have ${items.join(', ')}.`
 }
